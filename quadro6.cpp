@@ -3,15 +3,15 @@
 
 #include "shared.h"
 #include "In.h"
+#include "Out.h"
 
-const int INF = -1;
+//const int INF = -1;
 const int SOLVING_ERROR = -2;
 const double COMP_NUMBER2 = 0;
-const int ZERO = 0;
+//const int ZERO = 0;
 
 int Solve(double , double , double , double *, double *);
-int Out(int, double, double);
-//void skip_input(void);
+//int Out(int, double, double);
 int unit_Solve_test(int, double, double, double, double, double, int);
 void vyzov_tests(void);
 int Solve_line(double b, double c, double *root1, double *root2);
@@ -35,7 +35,7 @@ int main(void){
     return 0;
 }
 
-int Out(int countroot, double root1, double root2) {
+/*int Out(int countroot, double root1, double root2) {
     switch(countroot) {
         case 0:
             printf("No dicision\n");
@@ -63,8 +63,7 @@ int Out(int countroot, double root1, double root2) {
             return ZERO;
             break;
     }
-}
-
+}*/
 int unit_Solve_test(int number_test, double a, double b, double c, double root1_exp, double root2_exp, int nRoots_exp) {
     double root1 = NAN, root2 = NAN;
 
@@ -177,11 +176,6 @@ int comp_D(double a, double b, double D, double *root1, double *root2) {
 
     return SOLVING_ERROR;
 }
-
-/*void skip_input(void) {
-    int ch;
-    while((ch = getchar()) != '\n') {}
-}*/
 
 void vyzov_tests(void) {
     unit_Solve_test(1, 1.0, 5.0, 6.0, -3.0, -2.0, 2);
