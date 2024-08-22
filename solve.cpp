@@ -2,11 +2,13 @@
 #include "shared.h"
 #include <math.h>
 #include "Out.h"
+
 int comp_number2 = 0;
-int Solve(double a, double b, double c, double *root1, double *root2) {
+
+int solve(double a, double b, double c, double *root1, double *root2) {
     if(is_equal(a, comp_number2)) {
 
-        return Solve_line(b, c, root1, root2);
+        return solve_line(b, c, root1, root2);
     }else {
 
         return comp_D(a, b, c, root1, root2);
@@ -14,7 +16,7 @@ int Solve(double a, double b, double c, double *root1, double *root2) {
 
     return SOLVING_ERROR;
 }
-int Solve_line(double b, double c, double *root1, double *root2) {
+int solve_line(double b, double c, double *root1, double *root2) {
     if(is_equal(b, comp_number2)) {
         if(is_equal(c, comp_number2)) {
             *root1 = INF;
