@@ -2,8 +2,9 @@
 #include "shared.h"
 #include <math.h>
 #include "Out.h"
+int comp_number2 = 0;
 int Solve(double a, double b, double c, double *root1, double *root2) {
-    if(is_equal(a, COMP_NUMBER2)) {
+    if(is_equal(a, comp_number2)) {
 
         return Solve_line(b, c, root1, root2);
     }else {
@@ -14,28 +15,28 @@ int Solve(double a, double b, double c, double *root1, double *root2) {
     return SOLVING_ERROR;
 }
 int Solve_line(double b, double c, double *root1, double *root2) {
-    if(is_equal(b, COMP_NUMBER2)) {
-        if(is_equal(c, COMP_NUMBER2)) {
+    if(is_equal(b, comp_number2)) {
+        if(is_equal(c, comp_number2)) {
             *root1 = INF;
             *root2 = INF;
 
             return INF;
         } else {
-            *root1 = ZERO;
-            *root2 = ZERO;
+            *root1 = POISON_ROOT;
+            *root2 = POISON_ROOT;
 
             return 0;
         }
     }
 
-    if(!is_equal(b, COMP_NUMBER2)) {
-        if(is_equal(c, COMP_NUMBER2)) {
+    if(!is_equal(b, comp_number2)) {
+        if(is_equal(c, comp_number2)) {
             *root1 = 0.0;
             *root2 = 0.0;
 
             return 1;
         }
-        if(!is_equal(c, COMP_NUMBER2)) {
+        if(!is_equal(c, comp_number2)) {
             *root1 = -c/b;
             *root2 = -c/b;
 
@@ -49,7 +50,7 @@ int Solve_line(double b, double c, double *root1, double *root2) {
 int comp_D(double a, double b, double c, double *root1, double *root2) {
     double D = b*b - 4*a*c;
 
-    if(is_equal(D, COMP_NUMBER2)) {
+    if(is_equal(D, comp_number2)) {
         *root1 = *root2 = -b/(2*a);
         
         return 1;

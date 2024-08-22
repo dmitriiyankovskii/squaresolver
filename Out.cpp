@@ -26,7 +26,7 @@ int Out(int countroot, double root1, double root2) {
         default:
             printf("error\n");
 
-            return ZERO;
+            return POISON_ROOT;
             break;
     }
 }

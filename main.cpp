@@ -86,7 +86,7 @@ void run_tests(void) {
     struct Solve_test test3 = {.number_test = 3, .a = 0.0, .b = 2.0, .c = 1.0, .root1_exp = -0.5, .root2_exp = -0.5, .nRoots_exp = 1};
     struct line_test test4 = {.number_test = 4, .b = 5.0, .c = 4.0, .root1_exp = -0.8, .nRoots_exp = 1};
     struct line_test test5 = {.number_test = 5, .b = 0.0, .c = 0.0, .root1_exp = INF, .nRoots_exp = INF};
-    struct line_test test6 = {.number_test = 6, .b = 0.0, .c = 4.0, .root1_exp = ZERO, .nRoots_exp = 0};
+    struct line_test test6 = {.number_test = 6, .b = 0.0, .c = 4.0, .root1_exp = POISON_ROOT, .nRoots_exp = 0};
     struct line_test test7 = {.number_test = 7, .b = 5.0, .c = 0.0, .root1_exp = 0, .nRoots_exp = 1};
     
     unit_Solve_test(test1);
