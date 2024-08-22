@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 #include "in.h"
+#include "in.h"
 
 
 void skip_input(void);
