@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "Out.h"
+#include "out.h"
 
-int Out(int countroot, double root1, double root2) {
+int out(int countroot, double root1, double root2) {
     switch(countroot) {
         case 0:
             printf("No dicision\n");
