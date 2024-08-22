@@ -8,21 +8,10 @@
 #include "out.h"
 #include "solve.h"
 
-struct solve_test {
-    int number_test;
-    double a, b, c, root1_exp, root2_exp; 
-    int nRoots_exp;
-};
+#include "unit_line_test.h"
+#include "unit_solve_test.h"
 
-struct line_test {
-    int number_test;
-    double b, c, root1_exp; 
-    int nRoots_exp;
-};
-
-int unit_solve_test(Solve_test );
 void run_tests(void);
-int unit_line_test(line_test data);
 
 int main(void) {
     double a = NAN, b = NAN, c = NAN;
@@ -39,46 +28,6 @@ int main(void) {
     out(countroot, root1, root2);
 
     return 0;
-}
-
-int unit_solve_test(Solve_test data) {
-    double root1 = NAN, root2 = NAN;
-
-    int nRoots = solve(data.a, data.b, data.c, &root1, &root2);
-
-    if(!is_equal(nRoots, data.nRoots_exp) || !is_equal(root1, data.root1_exp) || !is_equal(root2, data.root2_exp)) {
-        printf("ERROR in Solve\n");
-        printf("ERROR test - %d, a = %lg, b = %lg, c = %lg, root1 = %lg, root2 = %lg, nRoots = %d\n",
-                data.number_test, data.a, data.b, data.c, root1, root2, nRoots);
-        printf("Expected: a = %lg, b = %lg, c = %lg, root1 = %lg, root2 = %lg, nRoots = %d\n",
-                data.a, data.b, data.c, data.root1_exp, data.root2_exp, data.nRoots_exp);
-
-        return data.number_test;
-    } else {
-        printf("No error\n");
-
-        return 0;
-    }
-}
-
-int unit_line_test(line_test data) {
-    double root1 = NAN, root2 = NAN;
-
-    int nRoots = solve_line(data.b, data.c, &root1, &root2);
-
-    if(!is_equal(root1, data.root1_exp) || !is_equal(nRoots, data.nRoots_exp)) {
-        printf("ERROR in line\n");
-        printf("ERROR test - %d, b = %lg, c = %lg, root1 = %lg, nRoots = %d\n",
-                data.number_test, data.b, data.c, root1, nRoots);
-        printf("Expected: b = %lg, c = %lg, root1 = %lg, nRoots = %d\n",
-                data.b, data.c, data.root1_exp, data.nRoots_exp);
-
-        return data.number_test;
-    } else {
-        printf("No error\n");
-
-        return 0;
-    }
 }
 
 void run_tests(void) {

@@ -1,5 +1,5 @@
-#ifndef SOLVE.H
-#define SOLVE.H
+#ifndef SOLVE_H
+#define SOLVE_H
 
 const int SOLVING_ERROR = -2;
 
