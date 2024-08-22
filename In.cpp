@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-#include "In.h"
+#include "in.h"
 
 
 void skip_input(void);
-void In(double *a, double *b, double *c) {
+void in(double *a, double *b, double *c) { // TODO assert
     printf("Enter the parameters of the quadratic equation (a, b, c): \n");
     while((scanf("%lg %lg %lg", a, b, c)) != COUNT_INPUT) {
 
@@ -14,6 +14,5 @@ void In(double *a, double *b, double *c) {
     }
 }
 void skip_input(void) {
-    int ch;
-    while((ch = getchar()) != '\n') {}
+    while(getchar() != '\n') {}
 }

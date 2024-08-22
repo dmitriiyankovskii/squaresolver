@@ -1,2 +1,8 @@
+#ifndef IN_H
+#define IN_H
+
 const int COUNT_INPUT = 3;
-void In(double *, double *, double *);
+
+void in(double *, double *, double *);
+
+#endif
