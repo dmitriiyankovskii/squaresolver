@@ -1,32 +1,27 @@
 #include <stdio.h>
 #include "out.h"
 
-int out(int countroot, double root1, double root2) { // FIXME remove breake after return
+int out(int countroot, double root1, double root2) { 
     switch(countroot) {
         case 0:
-            printf("No dicision\n");
+            printf("\033[33mNo dicision\033[97m\n");
 
             return 0;
-            break;
         case 1:
-            printf("x = %.2lg\n", root1);
+            printf("\033[33mx = %.2lg\033[97m\n", root1);
 
             return 1;
-            break;
         case 2:
-            printf("x1 = %.2lg, x2 = %.2lg\n", root1, root2);
+            printf("\033[33mx1 = %.2lg, x2 = %.2lg\033[97m\n", root1, root2);
 
             return 2;
-            break;
         case INF:
-            printf("an infinite number of solution\n");
+            printf("\033[33man infinite number of solution\033[97m\n");
 
             return INF;
-            break;
         default:
-            printf("error\n");
+            printf("\033[31merror\033[97m\n");
 
             return POISON_ROOT;
-            break;
     }
 }

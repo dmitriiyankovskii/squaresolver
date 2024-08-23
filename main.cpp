@@ -12,7 +12,6 @@
 int main(void) {
     double a = NAN, b = NAN, c = NAN;
 
-    printf("Unit tests:\n"); // FIXME -> run_tests()
     run_tests();
 
     in(&a, &b, &c);
