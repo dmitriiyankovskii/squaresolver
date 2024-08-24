@@ -6,19 +6,19 @@
 int out(int countroot, double root1, double root2) { 
     switch(countroot) {
         case 0:
-            format_printf(YELLO, ITALICS, "No dicision\n");
+            format_printf(YELLOW, ITALICS, "No dicision\n");
             
             return 0;
         case 1:
-            format_printf(YELLO, ITALICS, "x = %.2lg\n", root1);
+            format_printf(YELLOW, ITALICS, "x = %.2lg\n", root1);
 
             return 1;
         case 2:
-            format_printf(YELLO, ITALICS, "x1 = %.2lg, x2 = %.2lg\n", root1, root2);
+            format_printf(YELLOW, ITALICS, "x1 = %.2lg, x2 = %.2lg\n", root1, root2);
 
             return 2;
         case INF:
-            format_printf(YELLO, ITALICS, "an infinite number of solution\n");
+            format_printf(YELLOW, ITALICS, "an infinite number of solution\n");
             
             return INF;
         default:
