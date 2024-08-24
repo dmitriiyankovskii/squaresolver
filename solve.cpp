@@ -45,8 +45,7 @@ int solve_line(double b, double c, double *root1, double *root2) {
             return 1;
         }
         if(!is_equal(c, 0)) {
-            *root1 = -c/b;
-            *root2 = -c/b;
+            *root1 = *root2 = -c/b;
 
             return 1;
         }
