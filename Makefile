@@ -13,31 +13,31 @@ output:
 clean:
 	@rm -rf quad *.o
 
-In.o: In.cpp
+In.o:
 	@g++ In.cpp -c -o In.o $(DED_FLAGS)
 
-main.o: main.cpp
+main.o:
 	@g++ main.cpp -c -o main.o $(DED_FLAGS)
 
-Out.o: Out.cpp
+Out.o:
 	@g++ Out.cpp -c -o Out.o $(DED_FLAGS)
 
-run_tests.o: run_tests.cpp
+run_tests.o: 
 	@g++ run_tests.cpp -c -o run_tests.o $(DED_FLAGS)
 
-shared.o: shared.cpp
+shared.o: 
 	@g++ shared.cpp -c -o shared.o $(DED_FLAGS)
 
-solve.o: solve.cpp
+solve.o: 
 	@g++ solve.cpp -c -o solve.o $(DED_FLAGS)
 
-unit_line_test.o: unit_line_test.cpp
+unit_line_test.o:
 	@g++ unit_line_test.cpp -c -o unit_line_test.o $(DED_FLAGS)
 
-unit_solve_test.o: unit_solve_test.cpp
+unit_solve_test.o: 
 	@g++ unit_solve_test.cpp -c -o unit_solve_test.o $(DED_FLAGS)
 
-vari.o: vari.cpp
+vari.o:
 	@g++ vari.cpp -c -o vari.o $(DED_FLAGS)
 
 $(PROG_NAME): $(FILES)
