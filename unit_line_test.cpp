@@ -7,7 +7,7 @@
 #include "shared.h"
 #include "vari.h"
 
-    int unit_line_test(line_test data) {
+int unit_line_test(line_test data) {
     double root1 = NAN, root2 = NAN;
 
     int nRoots = solve_line(data.b, data.c, &root1, &root2);

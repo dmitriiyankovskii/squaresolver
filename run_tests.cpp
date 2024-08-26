@@ -3,7 +3,7 @@
 #include "run_tests.h"
 #include "unit_solve_test.h"
 #include "unit_line_test.h"
-#include "Out.h"
+#include "enum.h"
 
 void run_tests(void) {
     printf("Unit tests:\n");
@@ -17,11 +17,11 @@ void run_tests(void) {
                                        {6, 0.0, 4.0, POISON_ROOT, 0},
                                        {7, 5.0, 0.0, 0.0, 1}};
 
-    for(int i = 0; i<3; i++) {
+    for(int i = 0; i < 3; i++) {
         unit_solve_test(test_square[i]);
     }
 
-    for(int i = 0; i<4; i++) {
+    for(int i = 0; i < 4; i++) {
         unit_line_test(test_linear[i]);
     }
 }

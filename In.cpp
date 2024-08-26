@@ -4,8 +4,8 @@
 #include "in.h"
 #include "vari.h"
 
+static void skip_input(void);
 
-void skip_input(void);
 void in(double *a, double *b, double *c) { 
     assert(a);
     assert(b);
@@ -18,6 +18,7 @@ void in(double *a, double *b, double *c) {
         format_printf(RED, FAT, "invalid data type\n");
     }
 }
-void skip_input(void) {
+
+static void skip_input(void) {
     while(getchar() != '\n') {}
 }

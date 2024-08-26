@@ -3,7 +3,7 @@
 
 #include "shared.h"
 #include "in.h"
-#include "out.h"
+#include "enum.h"
 #include "solve.h"
 #include "unit_line_test.h"
 #include "unit_solve_test.h"
@@ -18,9 +18,9 @@ int main(void) {
 
     double root1 = NAN, root2 = NAN;
 
-    int countroot = solve(a, b, c, &root1, &root2);
+    enum countroot_ count = (enum countroot_)solve(a, b, c, &root1, &root2);
 
-    out(countroot, root1, root2);
+    out(count, root1, root2);
 
     return 0;
 }
