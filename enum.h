@@ -1,3 +1,6 @@
+#ifndef ENUM_H
+#define ENUM_H
+
 enum countroot_ {
     INF = -1,
     ROOT1 = 0,
@@ -7,4 +10,7 @@ enum countroot_ {
 
 const int POISON_ROOT = 0;
 const int SOLVING_ERROR = -2;
+
 int out(enum countroot_, double, double);
+
+#endif
