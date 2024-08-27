@@ -9,9 +9,11 @@
 #include "unit_solve_test.h"
 #include "run_tests.h"
 
-int main(void) {
-    double a = NAN, b = NAN, c = NAN;
+int main() {
+    
 
+    double a = NAN, b = NAN, c = NAN;
+    
     run_tests();
 
     in(&a, &b, &c);
