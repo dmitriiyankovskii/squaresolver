@@ -4,7 +4,7 @@ FILES="In.o main.o Out.o run_tests.o shared.o solve.o unit_line_test.o unit_solv
 
 echo "Start compilation"
 
-.PHONY: all clean
+.PHONY: all clean 
 
 all: quad
 

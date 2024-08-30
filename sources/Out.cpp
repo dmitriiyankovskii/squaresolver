@@ -22,7 +22,6 @@ int out(enum countroot_ count, double root1, double root2) {
             
             return INF;
         default:
-            printf("\033[31merror\033[97m\n");
             format_printf(RED, ITALICS, "error\n");
             return POISON_ROOT;
     }
